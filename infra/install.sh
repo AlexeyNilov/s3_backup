@@ -14,3 +14,4 @@ sudo cp -f infra/backup_to_s3.timer /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable backup_to_s3.service
 sudo systemctl enable backup_to_s3.timer
+sudo systemctl start backup_to_s3.timer
