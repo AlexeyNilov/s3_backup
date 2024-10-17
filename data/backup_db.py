@@ -14,7 +14,7 @@ s3 = boto3.client("s3")
 def backup_sqlite_to_s3(db_path: str):
     # Generate backup filename with timestamp
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-    file_name = os.path.basename(db_path).split('_')[0]
+    file_name = os.path.basename(db_path).split('.')[0]
     backup_filename = f"{file_name}_{timestamp}.sqlite"
     backup_filepath = os.path.join(backup_dir, backup_filename)
 
